@@ -10,7 +10,7 @@ class MessageUnitTest extends TestCase
 {
     public function testInstantiation()
     {
-        $this->assertInstanceOf('Maknz\Slack\Message', $this->getMessage());
+        $this->assertInstanceOf('Eloquentcoder\Slack\Message', $this->getMessage());
     }
 
     public function testSetText()

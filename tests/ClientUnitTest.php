@@ -9,7 +9,7 @@ class ClientUnitTest extends TestCase
     {
         $client = new Client('http://fake.endpoint');
 
-        $this->assertInstanceOf('Maknz\Slack\Client', $client);
+        $this->assertInstanceOf('Eloquentcoder\Slack\Client', $client);
 
         $this->assertSame('http://fake.endpoint', $client->getEndpoint());
     }
@@ -58,7 +58,7 @@ class ClientUnitTest extends TestCase
 
         $message = $client->createMessage();
 
-        $this->assertInstanceOf('Maknz\Slack\Message', $message);
+        $this->assertInstanceOf('Eloquentcoder\Slack\Message', $message);
 
         $this->assertSame($client->getDefaultChannel(), $message->getChannel());
 
@@ -73,7 +73,7 @@ class ClientUnitTest extends TestCase
 
         $message = $client->to('@regan');
 
-        $this->assertInstanceOf('Maknz\Slack\Message', $message);
+        $this->assertInstanceOf('Eloquentcoder\Slack\Message', $message);
 
         $this->assertSame('@regan', $message->getChannel());
     }

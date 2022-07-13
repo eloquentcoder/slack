@@ -36,6 +36,7 @@ class ActionConfirmation
      * Instantiate a new ActionConfirmation.
      *
      * @param array $attributes
+     *
      * @return void
      */
     public function __construct(array $attributes)
@@ -67,6 +68,7 @@ class ActionConfirmation
 
     /**
      * @param string $title
+     *
      * @return ActionConfirmation
      */
     public function setTitle($title)
@@ -86,6 +88,7 @@ class ActionConfirmation
 
     /**
      * @param string $text
+     *
      * @return ActionConfirmation
      */
     public function setText($text)
@@ -105,6 +108,7 @@ class ActionConfirmation
 
     /**
      * @param string $okText
+     *
      * @return ActionConfirmation
      */
     public function setOkText($okText)
@@ -124,6 +128,7 @@ class ActionConfirmation
 
     /**
      * @param string $dismissText
+     *
      * @return ActionConfirmation
      */
     public function setDismissText($dismissText)
@@ -141,9 +146,9 @@ class ActionConfirmation
     public function toArray()
     {
         return [
-            'title' => $this->getTitle(),
-            'text' => $this->getText(),
-            'ok_text' => $this->getOkText(),
+            'title'        => $this->getTitle(),
+            'text'         => $this->getText(),
+            'ok_text'      => $this->getOkText(),
             'dismiss_text' => $this->getDismissText(),
         ];
     }
