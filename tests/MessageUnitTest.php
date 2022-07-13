@@ -1,9 +1,9 @@
 <?php
 
-use Mockery;
-use Eloquentcoder\Slack\Message;
 use Eloquentcoder\Slack\Attachment;
 use Eloquentcoder\Slack\Client;
+use Eloquentcoder\Slack\Message;
+use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class MessageUnitTest extends TestCase
@@ -64,10 +64,10 @@ class MessageUnitTest extends TestCase
 
         $attachmentArray = [
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Attachment text',
-            'pretext' => 'Attachment pretext',
-            'color' => 'bad',
-            'fields' => [],
+            'text'     => 'Attachment text',
+            'pretext'  => 'Attachment pretext',
+            'color'    => 'bad',
+            'fields'   => [],
         ];
 
         $message->attach($attachmentArray);
@@ -93,7 +93,7 @@ class MessageUnitTest extends TestCase
 
         $obj = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $message->attach($obj);
@@ -113,12 +113,12 @@ class MessageUnitTest extends TestCase
 
         $obj1 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $obj2 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $message->attach($obj1)->attach($obj2);
@@ -142,12 +142,12 @@ class MessageUnitTest extends TestCase
 
         $obj1 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $obj2 = new Attachment([
             'fallback' => 'Fallback text for IRC',
-            'text' => 'Text',
+            'text'     => 'Text',
         ]);
 
         $message->attach($obj1)->attach($obj2);

@@ -17,13 +17,13 @@ class ClientUnitTest extends TestCase
     public function testInstantiationWithDefaults()
     {
         $defaults = [
-            'channel' => '#random',
-            'username' => 'Archer',
-            'icon' => ':ghost:',
-            'link_names' => true,
-            'unfurl_links' => true,
-            'unfurl_media' => false,
-            'allow_markdown' => false,
+            'channel'                 => '#random',
+            'username'                => 'Archer',
+            'icon'                    => ':ghost:',
+            'link_names'              => true,
+            'unfurl_links'            => true,
+            'unfurl_media'            => false,
+            'allow_markdown'          => false,
             'markdown_in_attachments' => ['text'],
         ];
 
@@ -49,9 +49,9 @@ class ClientUnitTest extends TestCase
     public function testCreateMessage()
     {
         $defaults = [
-            'channel' => '#random',
+            'channel'  => '#random',
             'username' => 'Archer',
-            'icon' => ':ghost:',
+            'icon'     => ':ghost:',
         ];
 
         $client = new Client('http://fake.endpoint', $defaults);
