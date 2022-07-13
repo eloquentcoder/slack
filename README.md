@@ -6,19 +6,16 @@
 
 A simple PHP package for sending messages to [Slack](https://slack.com) with [incoming webhooks](https://my.slack.com/services/new/incoming-webhook), focussed on ease-of-use and elegant syntax. **Note: this package is no longer being actively maintained.**
 
-* Laravel integration: [Slack for Laravel](https://github.com/maknz/slack-laravel)
-* Symfony integration: [NexySlackBundle](https://github.com/nexylan/NexySlackBundle)
-
 ## Requirements
 
-* PHP 5.5, 5.6, 7.0 or HHVM
+* PHP ^8.0 or HHVM
 
 ## Installation
 
 You can install the package using the [Composer](https://getcomposer.org/) package manager. You can install it by running this command in your project root:
 
 ```sh
-composer require maknz/slack
+composer require eloquentcoder/slack
 ```
 
 Then [create an incoming webhook](https://my.slack.com/services/new/incoming-webhook) on your Slack account for the package to use. You'll need the webhook URL to instantiate the client (or for the configuration file if using Laravel).
@@ -29,7 +26,7 @@ Then [create an incoming webhook](https://my.slack.com/services/new/incoming-web
 
 ```php
 // Instantiate without defaults
-$client = new Maknz\Slack\Client('https://hooks.slack.com/...');
+$client = new Eloquentcoder\Slack\Client('https://hooks.slack.com/...');
 
 // Instantiate with defaults, so all messages created
 // will be sent from 'Cyril' and to the #accounting channel
@@ -40,7 +37,7 @@ $settings = [
 	'link_names' => true
 ];
 
-$client = new Maknz\Slack\Client('https://hooks.slack.com/...', $settings);
+$client = new Eloquentcoder\Slack\Client('https://hooks.slack.com/...', $settings);
 ```
 
 #### Settings
