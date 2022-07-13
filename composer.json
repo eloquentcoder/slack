@@ -1,0 +1,27 @@
+{
+    "name": "maknz/slack",
+    "description": "A simple PHP package for sending messages to Slack, with a focus on ease of use and elegant syntax.",
+    "keywords": ["laravel", "slack"],
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Patrick Obafemi",
+            "email": "eloquentintech@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4.4",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eloquentcoder\\Slack\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
