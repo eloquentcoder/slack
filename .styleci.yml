@@ -1,6 +1,12 @@
-preset: laravel
-
+version: 8.0
+preset: recommended
 risky: false
 
-linting: true
+php: true
 
+
+finder:
+  exclude:
+    - "vendor"
+  name: "*.php"
+  
